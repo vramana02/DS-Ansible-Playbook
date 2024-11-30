@@ -1,15 +1,18 @@
 ---
 - hosts: all
   become: yes
+  gather_facts: yes
   tasks: 
   - name: install apache2 webserver
-  apt:
-    name: apache2
-    state: present  
-- name: I want to install wwebserver 
-  service:
-    name: apache2
-    state: restarted
+    apt:
+      name: apache2
+      state: present
+    when: ansible_os_family=="Debian"   
+  - name: I want to install wwebserver 
+    service:
+      name: apache2
+      state: restarted
+    when: ansible_os_family=="Debian"    
 
     
 
