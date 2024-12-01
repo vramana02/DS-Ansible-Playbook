@@ -5,12 +5,12 @@
   tasks: 
   - name: install apache2 webserver
     apt:
-      name: apache2
+      name: "{{mywebpackage}}"
       state: present
     when: ansible_os_family=="Debian"   
   - name: I want to install wwebserver 
     service:
-      name: apache2
+      name: "{{mywebpackage}}"
       state: restarted
     when: ansible_os_family=="Debian"    
 

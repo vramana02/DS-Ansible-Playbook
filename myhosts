@@ -1,6 +1,6 @@
 
 [mywebserver]
-172.31.8.205
+172.31.23.128
 
 [myappserver]
 172.31.8.204
@@ -10,3 +10,6 @@
 [mydbserver]
 172.31.8.207
 172.31.8.208
+
+[mywebserver:vars]
+mywebpackage=apache2
