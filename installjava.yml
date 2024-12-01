@@ -1,0 +1,9 @@
+---
+- hosts: mywebserver
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name: Install jdk kit
+    apt:
+      name: "{{myjavapackage}}"
+      state: present
