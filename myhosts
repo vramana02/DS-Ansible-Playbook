@@ -11,5 +11,4 @@
 172.31.8.207
 172.31.8.208
 
-[mywebserver:vars]
-mywebpackage=apache2
+
