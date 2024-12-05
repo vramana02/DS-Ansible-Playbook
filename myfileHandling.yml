@@ -13,3 +13,7 @@
     copy:
       src: mytextfile
       dest: /home/venkat/myfolder/mytextfile
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: present   
