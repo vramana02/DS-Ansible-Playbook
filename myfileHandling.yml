@@ -1,0 +1,15 @@
+---
+- hosts: 172.31.91.242
+  become: yes
+  gather_facts: yes
+  tasks: 
+  - include_tasks: myfile.yml
+  - name: I want to create a directory
+    file:
+      path: /home/venkat/myfolder
+      state: directory
+
+  - name: I want to copy a file
+    copy:
+      src: mytextfile
+      dest: /home/venkat/myfolder/mytextfile
