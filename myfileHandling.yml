@@ -21,3 +21,9 @@
     template:
          src: myindex.j2
          dest: /var/www/html/index.html  
+
+  - name: I want to download remote file 
+    get_url:
+        url: https://github.com/maha4dsvc/myAnsible_DS_E_7PM_26Nov24/blob/main/myStudents.yml
+        dest: /home/venkat
+        force_basic_auth: yes       
