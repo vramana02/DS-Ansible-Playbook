@@ -1,5 +1,6 @@
 ---
-- name: change owner on the group
-  command: chown -R tomcat:/opt/tomcat/apache-tomcat-10.1.33
-- name: change execution permisssion on bin group
-  command: sudo sh -c 'chmod +x /opt/tomcat/apache-tomcat-10.1.33/bin/*.sh'
+ - name: change owner on tomcat
+   command: sudo chown -R tomcat /opt/tomcat/apache-tomcat-10.1.33
+   
+ - name: change to execution permission on bin folder
+   command: sudo sh -c 'chmod +x /opt/tomcat/apache-tomcat-10.1.33/bin/*.sh'
