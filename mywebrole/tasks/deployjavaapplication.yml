@@ -1,0 +1,6 @@
+---
+- name: i want to deploy java app
+  get_url:
+    url: https://mywarfile03dec24.s3.us-east-2.amazonaws.com/login.war
+    dest: /opt/tomcat/apache-tomcat-10.1.33/webapps/login.war
+    force_basic_auth: yes
