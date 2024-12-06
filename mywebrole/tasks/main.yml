@@ -1,2 +1,8 @@
 ---
 # tasks file for mywebrole
+- include_tasks: javainstallation.yml
+- include_tasks: downloadtomcat.yml
+- include_tasks: addusergroup.yml
+- include_tasks: permission.yml
+- include_tasks: tomcatservice.yml
+- include_tasks: tomcatstartservice.yml
